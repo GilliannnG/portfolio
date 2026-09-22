@@ -1,0 +1,12 @@
+# Local source materials are kept outside the public portfolio.
+/hypebeast/materials/
+
+# The older portfolio's image archive is not part of the current public site.
+/assets/*
+!/assets/CV-Yiyang-Guo-HYPEBEAST-Creative-Intern.pdf
+/legacy-index.html
+
+# Local preview and operating-system files.
+preview-server.log
+Thumbs.db
+.DS_Store

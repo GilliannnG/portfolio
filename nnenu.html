@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nnenu — a mobile product for discovering and recording content inside temporary physical spaces." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Nnenu | Gillian Guo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="nnenu-page" data-page="nnenu">
+    <a class="skip-link" href="#case-content" data-i18n="common.skipCase">Skip to project</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" data-lang-link>Gillian Guo</a>
+      <div class="header-actions">
+        <nav aria-label="Primary navigation">
+          <a href="index.html#work" data-lang-link data-i18n="nav.projects">Projects</a>
+          <a href="assets/Gillian-Guo-Resume.pdf" target="_blank" rel="noreferrer" data-i18n="nav.resume">Resume</a>
+        </nav>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button><button type="button" data-lang="zh-Hant">繁</button><button type="button" data-lang="zh-Hans">简</button>
+        </div>
+        <button class="contact-button" type="button" data-contact-open data-i18n="nav.connect">Connect</button>
+      </div>
+    </header>
+
+    <main class="nnenu-main" id="case-content">
+      <header class="nnenu-hero">
+        <div class="nnenu-hero-copy">
+          <p class="nnenu-eyebrow" data-i18n="nnenu.eyebrow">Ongoing · Mobile product</p>
+          <h1>Nnenu</h1>
+          <p class="nnenu-hero-title" data-i18n="nnenu.heroTitle">A field guide for temporary spaces.</p>
+          <p class="nnenu-hero-note" data-i18n="nnenu.heroNote">Nnenu helps people discover specific things inside exhibitions, markets and complex indoor events, then record what is missing with others.</p>
+          <ul class="tag-list" aria-label="Project categories">
+            <li data-i18n="tag.productDesign">Product design</li>
+            <li data-i18n="tag.mobileUx">Mobile UX</li>
+            <li data-i18n="tag.spatialExperience">Spatial experience</li>
+          </ul>
+        </div>
+        <div class="nnenu-stage" aria-label="Nnenu exploration screens">
+          <img src="assets/nnenu/explore-area.png" alt="Nnenu selected area screen showing nearby shops" width="393" height="884" fetchpriority="high" />
+          <img src="assets/nnenu/explore-food.png" alt="Nnenu food detail screen showing item information" width="393" height="884" fetchpriority="high" />
+        </div>
+      </header>
+
+      <section class="nnenu-snapshot" aria-labelledby="snapshot-title">
+        <header class="nnenu-section-intro compact">
+          <p>01</p>
+          <div>
+            <h2 id="snapshot-title" data-i18n="nnenu.snapshotTitle">Project snapshot</h2>
+            <p data-i18n="nnenu.snapshotNote">The context, brief and current state in four short moves.</p>
+          </div>
+        </header>
+        <div class="nnenu-summary-list">
+          <article class="nnenu-summary-row">
+            <h3 data-i18n="nnenu.situation">Situation</h3>
+            <ul>
+              <li data-i18n="nnenu.situation1">Maps stop at venues; users still cannot see what is worth finding inside.</li>
+              <li data-i18n="nnenu.situation2">Official directories, social posts and screenshots fragment rapidly changing information.</li>
+            </ul>
+          </article>
+          <article class="nnenu-summary-row">
+            <h3 data-i18n="nnenu.task">Task</h3>
+            <ul>
+              <li data-i18n="nnenu.task1">Organize a temporary space from area to shop to item.</li>
+              <li data-i18n="nnenu.task2">Make discovery and contribution work as one connected experience.</li>
+            </ul>
+          </article>
+          <article class="nnenu-summary-row">
+            <h3 data-i18n="nnenu.action">Action</h3>
+            <ul>
+              <li data-i18n="nnenu.action1">Designed progressive Explore and Create journeys.</li>
+              <li data-i18n="nnenu.action2">Built reusable search, navigation, card and media patterns.</li>
+              <li data-i18n="nnenu.action3">Identified content-first and camera-first priorities for the next iteration.</li>
+            </ul>
+          </article>
+          <article class="nnenu-summary-row">
+            <h3 data-i18n="nnenu.current">Current state</h3>
+            <ul>
+              <li data-i18n="nnenu.current1">Core exploration, detail, authentication and creation flows are prototyped.</li>
+              <li data-i18n="nnenu.current2">The next phase will validate discovery speed, creation effort and information freshness.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="nnenu-experience" aria-labelledby="experience-title">
+        <header class="nnenu-section-intro">
+          <p>02</p>
+          <div>
+            <h2 id="experience-title" data-i18n="nnenu.experienceTitle">Product structure</h2>
+            <p data-i18n="nnenu.experienceNote">Two connected paths help people understand a place and contribute what is missing.</p>
+          </div>
+        </header>
+
+        <div class="nnenu-structure" aria-label="Nnenu product structure">
+          <p class="structure-origin">Nnenu</p>
+          <article class="structure-branch">
+            <h3 data-i18n="nnenu.explore">Explore</h3>
+            <ol>
+              <li data-i18n="nnenu.area">Area</li>
+              <li data-i18n="nnenu.shop">Shop</li>
+              <li data-i18n="nnenu.item">Food / item</li>
+            </ol>
+          </article>
+          <article class="structure-branch">
+            <h3 data-i18n="nnenu.contribute">Contribute</h3>
+            <ol>
+              <li data-i18n="nnenu.chooseType">Choose type</li>
+              <li data-i18n="nnenu.locate">Locate</li>
+              <li data-i18n="nnenu.describe">Describe</li>
+              <li data-i18n="nnenu.images">Add images</li>
+              <li data-i18n="nnenu.preview">Preview</li>
+            </ol>
+          </article>
+        </div>
+
+        <article class="nnenu-flow-block">
+          <header class="nnenu-flow-copy">
+            <p>02.1</p>
+            <div>
+              <h3 data-i18n="nnenu.exploreFlowTitle">Explore from place to item</h3>
+              <p data-i18n="nnenu.exploreFlowNote">The journey moves from an area to a shop and then an item, preserving location context at every step.</p>
+            </div>
+          </header>
+          <figure>
+            <button class="nnenu-image-button" type="button" data-lightbox="assets/nnenu/explore-flow.png" data-alt="Nnenu exploration flow from selected area to food detail" aria-label="Open Nnenu exploration flow">
+              <img src="assets/nnenu/explore-flow.png" alt="Four Nnenu screens showing the path from selected area to selected shop, shop detail and food detail" width="1862" height="1112" loading="lazy" />
+            </button>
+          </figure>
+        </article>
+
+        <article class="nnenu-flow-block create-flow-block">
+          <header class="nnenu-flow-copy">
+            <p>02.2</p>
+            <div>
+              <h3 data-i18n="nnenu.createFlowTitle">Create with one reusable pattern</h3>
+              <p data-i18n="nnenu.createFlowNote">Menus, shops and food share the same logic. The shop flow shows the full sequence from choosing a type and location to images, labels and preview.</p>
+            </div>
+          </header>
+          <figure>
+            <button class="nnenu-image-button" type="button" data-lightbox="assets/nnenu/create-shop-flow.png" data-alt="Nnenu shop creation flow" aria-label="Open Nnenu shop creation flow">
+              <img src="assets/nnenu/create-shop-flow.png" alt="Nine Nnenu screens showing the complete shop creation flow" width="3200" height="787" loading="lazy" />
+            </button>
+          </figure>
+        </article>
+      </section>
+
+      <section class="nnenu-system" aria-labelledby="system-title">
+        <header class="nnenu-section-intro">
+          <p>03</p>
+          <div>
+            <h2 id="system-title" data-i18n="nnenu.systemTitle">One visual language</h2>
+            <p data-i18n="nnenu.systemNote">A token-led system turns the product's existing patterns into reusable foundations, states and components.</p>
+          </div>
+        </header>
+
+        <div class="nnenu-foundation-grid">
+          <article class="nnenu-foundation-card nnenu-palette-card">
+            <header class="nnenu-system-card-head">
+              <span>Foundation 01</span>
+              <h3 data-i18n="nnenu.colorTitle">Color system</h3>
+            </header>
+            <p data-i18n="nnenu.colorNote">Primary and secondary ramps support interaction and depth; semantic tokens keep their meaning across light and dark modes.</p>
+            <div class="nnenu-palette-group">
+              <div class="nnenu-palette-label"><div><strong data-i18n="nnenu.primaryColor">Primary</strong><small data-i18n="nnenu.primaryUsage">Focus, selection and action</small></div><b>#E925F4</b></div>
+              <div class="nnenu-brand-scale nnenu-primary-scale" aria-label="Nnenu primary color scale"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="nnenu-palette-group">
+              <div class="nnenu-palette-label"><div><strong data-i18n="nnenu.secondaryColor">Secondary</strong><small data-i18n="nnenu.secondaryUsage">Support and visual depth</small></div><b>#8921F8</b></div>
+              <div class="nnenu-brand-scale nnenu-secondary-scale" aria-label="Nnenu secondary color scale"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="nnenu-semantic-head" id="foundation-details"><strong data-i18n="nnenu.semanticTitle">Semantic status</strong><span data-i18n="nnenu.semanticNote">Meaning stays stable across light and dark modes</span></div>
+            <div class="nnenu-semantic-row" aria-label="Semantic colors"><span class="danger"><i></i><b data-i18n="nnenu.danger">Danger</b><small>#EC161C</small></span><span class="warning"><i></i><b data-i18n="nnenu.warning">Warning</b><small>#DD8C00</small></span><span class="success"><i></i><b data-i18n="nnenu.success">Success</b><small>#00C84B</small></span><span class="information"><i></i><b data-i18n="nnenu.information">Information</b><small>#2338D8</small></span></div>
+          </article>
+
+          <article class="nnenu-foundation-card nnenu-type-card">
+            <header class="nnenu-system-card-head">
+              <span>Foundation 02</span>
+              <h3 data-i18n="nnenu.typeTitle">Type &amp; rhythm</h3>
+            </header>
+            <p data-i18n="nnenu.typeNote">A compact Roboto scale and 4px rhythm are derived from the working mobile screens, so the system contains only patterns the product uses.</p>
+            <div class="nnenu-type-specimen"><strong>Aa</strong><div><b>Roboto</b><span>Regular · Medium · Bold</span></div></div>
+            <div class="nnenu-type-scale" aria-label="Nnenu type scale"><span>24</span><span>20</span><span>18</span><span>16</span><span>14</span><span>12</span><span>10</span></div>
+            <div class="nnenu-rhythm-preview" aria-label="4 pixel spacing rhythm"><span><i></i><b>4</b></span><span><i></i><b>8</b></span><span><i></i><b>12</b></span><span><i></i><b>16</b></span><span><i></i><b>24</b></span></div>
+            <dl class="nnenu-system-metrics"><div><span class="nnenu-metric-icon spacing" aria-hidden="true"><i></i></span><dt>4px</dt><dd data-i18n="nnenu.spacingBase">Spacing base</dd></div><div><span class="nnenu-metric-icon radius" aria-hidden="true"><i></i></span><dt>4–12px</dt><dd data-i18n="nnenu.radiusRange">Control to container radius</dd></div><div><span class="nnenu-metric-icon full" aria-hidden="true"><i></i></span><dt>999px</dt><dd data-i18n="nnenu.fullRadius">Pill &amp; circle radius</dd></div></dl>
+          </article>
+        </div>
+
+        <header class="nnenu-component-heading" id="component-layer">
+          <span>Component layer</span>
+          <div><h3 data-i18n="nnenu.componentsTitle">Stable structure, flexible content</h3><p data-i18n="nnenu.componentsNote">Text, icons and optional layers change through properties; hierarchy and interaction change through variants.</p></div>
+        </header>
+
+        <div class="nnenu-component-showcase">
+          <div class="nnenu-ui-board" aria-label="Nnenu reusable component examples">
+            <div class="nnenu-demo-appbar"><span aria-hidden="true">&#8592;</span><strong>Create/Edit Menu</strong><b>Done</b></div>
+            <div class="nnenu-demo-search"><span aria-hidden="true"></span><p>Search places, shops or food</p><i>Filter</i></div>
+            <div class="nnenu-demo-chips"><span class="selected">All</span><span>Area</span><span>Shop</span><span>Food</span></div>
+            <article class="nnenu-demo-action-card"><div class="nnenu-demo-thumbnail"></div><div><small>AREA · WAN CHAI</small><h4>Cozy Wan Chai</h4><p>12 shops · 58 items</p></div><button type="button" tabindex="-1" aria-hidden="true">&#8594;</button></article>
+            <div class="nnenu-demo-field"><span>Instance name</span><p>Weekend Market</p></div>
+            <div class="nnenu-demo-buttons"><button type="button" tabindex="-1">Save</button><button type="button" tabindex="-1">Preview</button></div>
+            <nav class="nnenu-demo-bottom-nav" aria-label="Nnenu demo navigation"><span class="active"><i></i>Explore</span><span><i></i>Create</span><span><i></i>Profile</span></nav>
+          </div>
+
+          <figure class="nnenu-auth-stage">
+            <div><img src="assets/nnenu/login.png" alt="Nnenu login screen" width="393" height="852" loading="lazy" /><img src="assets/nnenu/signup.png" alt="Nnenu sign-up screen" width="393" height="852" loading="lazy" /></div>
+            <figcaption data-i18n="nnenu.systemApplication">Reusable design rules make new screens faster to build while keeping the experience consistent.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="nnenu-reflection" aria-labelledby="reflection-title">
+        <header class="nnenu-section-intro">
+          <p>04</p>
+          <div>
+            <h2 id="reflection-title" data-i18n="nnenu.reflectionTitle">Reflection &amp; next</h2>
+            <p data-i18n="nnenu.reflectionNote">The prototype establishes the structure. The next iteration needs to prove that it is useful in a live, changing environment.</p>
+          </div>
+        </header>
+        <div class="nnenu-next-list">
+          <article>
+            <p>01</p>
+            <div><h3 data-i18n="nnenu.next1Title">Content first</h3><p data-i18n="nnenu.next1Note">Test whether people can reach a specific item faster than browsing every shop.</p></div>
+          </article>
+          <article>
+            <p>02</p>
+            <div><h3 data-i18n="nnenu.next2Title">Camera first</h3><p data-i18n="nnenu.next2Note">Replace form-heavy creation with photo capture and confirmation.</p></div>
+          </article>
+          <article>
+            <p>03</p>
+            <div><h3 data-i18n="nnenu.next3Title">Fresh and trusted</h3><p data-i18n="nnenu.next3Note">Add source, timestamp and state so users know whether information still applies.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <a class="back-link" href="index.html#work" data-lang-link data-i18n="common.back">Back</a>
+    </main>
+
+    <dialog class="lightbox" aria-label="Expanded project image"><button class="lightbox-close" type="button" aria-label="Close expanded image" data-i18n="common.close">Close</button><img src="" alt="" /></dialog>
+    <dialog class="contact-dialog" aria-labelledby="contact-dialog-title">
+      <div class="dialog-topline"><p data-i18n="contact.label">Contact</p><button type="button" data-contact-close data-i18n="common.close">Close</button></div>
+      <h2 id="contact-dialog-title" data-i18n="contact.dialogHeading">Hello, let’s connect.</h2>
+      <p class="dialog-note" data-i18n="contact.dialogNote">The quickest way to reach me is by email.</p>
+      <div class="contact-options"><a href="mailto:g1713715863@gmail.com"><span data-i18n="contact.email">Email</span><strong>g1713715863@gmail.com</strong></a><a href="https://www.linkedin.com/in/yiyang-guo-gillian" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong data-i18n="contact.viewProfile">View profile</strong></a><a href="assets/Gillian-Guo-Resume.pdf" target="_blank" rel="noreferrer"><span data-i18n="nav.resume">Resume</span><strong data-i18n="contact.openPdf">Open PDF</strong></a></div>
+    </dialog>
+  </body>
+</html>
