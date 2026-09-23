@@ -73,42 +73,16 @@
   will-change: transform;
 }
 
-.hype-home.identity-motion-ready .nav-identity {
-  transition: transform 360ms cubic-bezier(.22, 1, .36, 1);
+.has-js .hype-home .nav-identity {
+  visibility: hidden;
 }
 
-.hype-home.identity-motion-prepared.identity-at-intro .nav-identity {
-  transform: translate(var(--identity-intro-x, 0px), var(--identity-intro-y, 0px)) scale(var(--identity-intro-scale, 1));
+.has-js .hype-home.identity-motion-prepared .nav-identity {
+  visibility: visible;
 }
 
-.hype-home.identity-motion-ready .intro-identity-slot {
+.hype-home.identity-motion-prepared .intro-identity-slot {
   color: transparent;
-}
-
-@keyframes home-identity-settle {
-  from {
-    transform: translate(var(--identity-intro-x, 0px), var(--identity-intro-y, 0px)) scale(var(--identity-intro-scale, 1));
-  }
-
-  to {
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-@supports (animation-timeline: scroll()) {
-  .hype-home.identity-motion-ready .nav-identity {
-    animation: home-identity-settle 1s linear both;
-    animation-range: 0 180px;
-    animation-timeline: scroll(root block);
-    transition: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hype-home.identity-motion-ready .nav-identity {
-    animation: none;
-    transition: none;
-  }
 }
 
 .hype-intro h1 {

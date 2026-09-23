@@ -17,8 +17,26 @@ const introIdentitySlot = document.querySelector("[data-intro-identity-slot]");
 
 if (navIdentity && introIdentitySlot) {
   const homePage = document.body;
+  let introX = 0;
+  let introY = 0;
+  let introScale = 1;
+  let frameRequested = false;
 
-  const updateIdentityPosition = () => {
+  const renderIdentityPosition = () => {
+    frameRequested = false;
+    const progress = Math.min(1, Math.max(0, window.scrollY / 180));
+    const remaining = 1 - progress;
+    const scale = 1 + (introScale - 1) * remaining;
+    navIdentity.style.transform = `translate3d(${introX * remaining}px, ${introY * remaining}px, 0) scale(${scale})`;
+  };
+
+  const requestIdentityPosition = () => {
+    if (frameRequested) return;
+    frameRequested = true;
+    requestAnimationFrame(renderIdentityPosition);
+  };
+
+  const updateIdentityMetrics = () => {
     const header = navIdentity.offsetParent;
     if (!header) return;
 
@@ -27,34 +45,25 @@ if (navIdentity && introIdentitySlot) {
     const sourceLeft = headerRect.left + navIdentity.offsetLeft;
     const sourceTop = headerRect.top + navIdentity.offsetTop;
     const sourceHeight = navIdentity.offsetHeight || 1;
-    const scale = Math.min(1.88, Math.max(1, slotRect.height / sourceHeight));
-    const scaleHeightOffset = ((sourceHeight * scale) - sourceHeight) / 2;
+    introScale = Math.min(1.88, Math.max(1, slotRect.height / sourceHeight));
+    const scaleHeightOffset = ((sourceHeight * introScale) - sourceHeight) / 2;
 
-    homePage.style.setProperty("--identity-intro-x", `${slotRect.left - sourceLeft}px`);
-    homePage.style.setProperty("--identity-intro-y", `${slotRect.top - sourceTop + scaleHeightOffset}px`);
-    homePage.style.setProperty("--identity-intro-scale", scale.toFixed(3));
+    introX = slotRect.left - sourceLeft;
+    introY = slotRect.top + window.scrollY - sourceTop + scaleHeightOffset;
+    renderIdentityPosition();
+    homePage.classList.add("identity-motion-prepared");
   };
 
-  const setIntroState = (isInIntro) => {
-    homePage.classList.toggle("identity-at-intro", isInIntro);
-  };
+  updateIdentityMetrics();
 
-  updateIdentityPosition();
-  setIntroState(introIdentitySlot.getBoundingClientRect().bottom > 84);
-  homePage.classList.add("identity-motion-prepared");
-
-  requestAnimationFrame(() => {
-    homePage.classList.add("identity-motion-ready");
-  });
-
-  const introObserver = new IntersectionObserver(([entry]) => {
-    setIntroState(entry.isIntersecting);
-  }, { rootMargin: "-84px 0px 0px 0px", threshold: 0 });
-
-  const identityResizeObserver = new ResizeObserver(updateIdentityPosition);
+  const identityResizeObserver = new ResizeObserver(updateIdentityMetrics);
   identityResizeObserver.observe(navIdentity);
   identityResizeObserver.observe(introIdentitySlot);
-  introObserver.observe(introIdentitySlot);
+  window.addEventListener("scroll", requestIdentityPosition, { passive: true });
+  window.addEventListener("resize", updateIdentityMetrics, { passive: true });
+  window.addEventListener("pageshow", updateIdentityMetrics);
+  window.addEventListener("load", updateIdentityMetrics, { once: true });
+  document.fonts?.ready.then(updateIdentityMetrics);
 }
 
 document.querySelectorAll("[data-project-carousel]").forEach((carousel) => {
