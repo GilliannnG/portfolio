@@ -21,7 +21,7 @@
 
 ## 发布前检查
 
-- 更新 `assets/Gillian-Guo-Resume.pdf`。
+- 更新 `assets/CV-Yiyang-Guo.pdf`。
 - 点击所有项目、图片、邮箱、LinkedIn 和 Resume 链接。
 - 分别检查 EN、繁體和简体版本。
 - 用手机完整浏览一次。
