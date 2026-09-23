@@ -450,7 +450,7 @@
   background-color: #f4f3ef;
   background-image:
     linear-gradient(rgb(244 243 239 / .72), rgb(244 243 239 / .72)),
-    url("assets/culture-research/scene-travels-editorial-collage.png");
+    url("assets/culture-research/scene-travels-editorial-collage.webp");
   background-position: center;
   background-size: cover;
   color: var(--ink);
@@ -462,7 +462,7 @@
   background-color: #f4f3ef;
   background-image:
     linear-gradient(rgb(244 243 239 / .66), rgb(244 243 239 / .66)),
-    url("assets/culture-research/scene-travels-editorial-collage.png");
+    url("assets/culture-research/scene-travels-editorial-collage.webp");
 }
 
 .featured-research-index {
