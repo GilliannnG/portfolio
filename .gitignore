@@ -4,6 +4,16 @@
 # The older portfolio's image archive is not part of the current public site.
 /assets/*
 !/assets/CV-Gillian-Guo.pdf
+!/assets/gillian-line-logo.webp
+!/assets/形象icon参考.webp
+!/assets/crew/
+!/assets/crew/*.webp
+!/assets/culture-research/
+!/assets/culture-research/*.webp
+!/assets/vision-game/
+!/assets/vision-game/*.webp
+!/assets/workshop/
+!/assets/workshop/*.webp
 /legacy-index.html
 
 # Local preview and operating-system files.
