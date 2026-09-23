@@ -3,7 +3,7 @@
 
 # The older portfolio's image archive is not part of the current public site.
 /assets/*
-!/assets/CV-Yiyang-Guo-HYPEBEAST-Creative-Intern.pdf
+!/assets/CV-Gillian-Guo.pdf
 /legacy-index.html
 
 # Local preview and operating-system files.
